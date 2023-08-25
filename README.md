@@ -52,7 +52,7 @@
 | Groups are an important concept when we speak about privacy and zero knowledge technologies. They can be thought of as anonymity sets, and are a way to establish necessary trust between a set of participants. The goal of this project is to provide a comprehensive infrastructure to allow anyone to create and manage their own groups. |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-Bandada consists of a beck-end to store the groups and provide the [**API**](/apps/api), two front-ends: the [**dashboard**](/apps/dashboard) to manage groups and members and a [**demo**](/apps/client) application to allow end-users to join the groups, and the [**contracts**](/apps/contracts) Additionally, it also provides a set of JavaScript libraries to support developers.
+Bandada consists of a back-end to store the groups and provide the [**API**](/apps/api), two front-ends: the [**dashboard**](/apps/dashboard) to manage groups and members and a [**demo**](/apps/client) application to allow end-users to join the groups, and the [**contracts**](/apps/contracts) Additionally, it also provides a set of JavaScript libraries to support developers.
 
 Two types of groups can be created from the dashboard: **manual** or **credential** groups. In the former you can add members by entering IDs directly or by creating invite links, while in the latter you can define credentials that members must prove they have in order to access the group.
 
@@ -246,7 +246,7 @@ It will also automatically check that the modified files comply with ESLint and 
 
 ### Database
 
-Bandada require a SQL database to work, which is used by the `api` application.
+Bandada requires a SQL database to work, which is used by the `api` application.
 Bandada can work with Postgres and SQLite. Other SQL flavors should work but have not been tested yet.
 You can pass the connection URL to the database using the environment variable (see below).
 
@@ -268,7 +268,7 @@ docker-compose up -d
 
 #### Local development
 
-You can start dependencies essential for local development like a local ethereum network (with data persistance) and TheGraph node using the command below:
+You can start dependencies essential for local development like a local ethereum network (with data persistence) and TheGraph node using the command below:
 
 ```sh
 docker-compose -f docker-compose.dev.yml up -d
@@ -298,7 +298,7 @@ Bandada contract has been deployed to:             0x9fE46736679d2D9a65F0992F227
 BandadaSemaphore contract has been deployed to:    0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
 ```
 
-These values are set as defaults in `libs/utils/src/contract-addresses.ts`. If you change the contract and deploy again, new address need to be set here.
+These values are set as defaults in `libs/utils/src/contract-addresses.ts`. If you change the contract and deploy again, new address needs to be set here.
 
 To reset the local network or TheGraph node, you can stop the docker containers, and delete the respective folders inside `./.data`.
 
